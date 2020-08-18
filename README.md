@@ -102,6 +102,13 @@ The filters supported by Thumbor are documented [here](https://docs.aws.amazon.c
 https://d1aku1o8fc3y2r.cloudfront.net/filters:watermark(aws-image-handler-bucket,sage.png,10,10,1,50)/people.jpg
 
 
+
+<!-- https://github.com/awslabs/serverless-image-handler/issues/76 -->
+
+403 (Cached)
+200
+
+
 <!-- Definitions -->
 
 [Amazon CloudFront]: https://docs.aws.amazon.com/cloudfront/index.html
