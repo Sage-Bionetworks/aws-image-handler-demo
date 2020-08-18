@@ -10,6 +10,8 @@ The resources used by [AWS Serverless Image Handler] are listed
 [here](https://docs.aws.amazon.com/solutions/latest/serverless-image-handler/resources.html).
 The most important resources are introduced below.
 
+- [awslabs / serverless-image-handler](https://github.com/awslabs/serverless-image-handler) (GitHub)
+
 ### Amazon CloudFront
 
 [Amazon CloudFront] speeds up distribution of your static and dynamic web content,
@@ -22,14 +24,20 @@ that provide low latency and high performance.
 [sharp] is a high speed Node.js module is to convert large images in common
 formats to smaller, web-friendly JPEG, PNG and WebP images of varying dimensions.
 
+### Thumbor
+
+XXX
+
 ### Amazon Rekognition
 
 [Amazon Rekognition] makes it easy to add image and video analysis to your
 applications. You just provide an image or video to the Amazon Rekognition API,
 and the service can identify objects, people, text, scenes, and activities.
-
 It can detect any inappropriate content as well. Amazon Rekognition also
 provides highly accurate facial analysis and facial recognition.
+
+An alternative solution for face detection is to use
+[Thumbor custom detection](https://thumbor.readthedocs.io/en/latest/custom_detection.html).
 
 ## Requirements
 
@@ -89,6 +97,9 @@ API. We recommended using your own front-end application for image modification.
 
 The filters supported by Thumbor are documented [here](https://docs.aws.amazon.com/solutions/latest/serverless-image-handler/appendix-d.html).
 
+
+
+https://d1aku1o8fc3y2r.cloudfront.net/filters:watermark(aws-image-handler-bucket,sage.png,10,10,1,50)/people.jpg
 
 
 <!-- Definitions -->
