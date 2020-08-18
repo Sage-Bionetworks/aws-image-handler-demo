@@ -6,14 +6,32 @@ This document provides a review of a smart image service implementation that rel
 
 ## Resources
 
-- [AWS Serverless Image Handler]
-- [sharp]
+The resources used by [AWS Serverless Image Handler] are listed
+[here](https://docs.aws.amazon.com/solutions/latest/serverless-image-handler/resources.html).
+The most important resources are introduced below.
 
-## Review
+### Amazon CloudFront
 
-### AWS Serverless Image Handler
+[Amazon CloudFront] speeds up distribution of your static and dynamic web content,
+such as .html, .css, .php, image, and media files. When users request your
+content, CloudFront delivers it through a worldwide network of edge locations
+that provide low latency and high performance.
 
-#### Requirements
+### sharp
+
+[sharp] is a high speed Node.js module is to convert large images in common
+formats to smaller, web-friendly JPEG, PNG and WebP images of varying dimensions.
+
+### Amazon Rekognition
+
+[Amazon Rekognition] makes it easy to add image and video analysis to your
+applications. You just provide an image or video to the Amazon Rekognition API,
+and the service can identify objects, people, text, scenes, and activities.
+
+It can detect any inappropriate content as well. Amazon Rekognition also
+provides highly accurate facial analysis and facial recognition.
+
+## Requirements
 
 One or more S3 buckets are required to store original images. Let's craete a
 bucket and add a picture of a group of people.
@@ -30,7 +48,7 @@ bucket and add a picture of a group of people.
 Then select the newly created bucket and add a picture of a group of people
 named `people.jpg`.
 
-#### Deployment
+## Deployment
 
 - Go to [AWS Serverless Image Handler]
 - AWS > `CloudFormation`
@@ -54,14 +72,28 @@ named `people.jpg`.
     - Click on `Create stack`
 - `CloudFormation` > `Stacks` > `aws-image-handler`
 
-#### Demo
+## Demo
 
 Select the stack created. The tab `Outputs` provides the following URLs:
 
 - ApiEndpoint: https://d1aku1o8fc3y2r.cloudfront.net
 - DemoUrl: https://d2xjodzm25t98k.cloudfront.net/index.html
 
+**Note**:
+
+> The Serverless Image Handler demo UI offers a limited set of image edits and
+does not include the full scope of capabilities offered by the Image Handler
+API. We recommended using your own front-end application for image modification.
+
+## Filters
+
+The filters supported by Thumbor are documented [here](https://docs.aws.amazon.com/solutions/latest/serverless-image-handler/appendix-d.html).
+
+
+
 <!-- Definitions -->
 
+[Amazon CloudFront]: https://docs.aws.amazon.com/cloudfront/index.html
+[Amazon Rekognition]: https://docs.aws.amazon.com/rekognition/index.html
 [AWS Serverless Image Handler]: https://aws.amazon.com/solutions/implementations/serverless-image-handler/
 [sharp]: https://sharp.pixelplumbing.com/

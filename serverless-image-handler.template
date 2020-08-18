@@ -67,7 +67,7 @@
     "Mappings": {
         "Send": {
             "AnonymousUsage": {
-                "Data": "Yes"
+                "Data": "No"
             }
         },
         "SourceCode": {
